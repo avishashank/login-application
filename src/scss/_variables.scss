@@ -1,0 +1,63 @@
+$primary-color: #181824;
+$grey: #7f7f7f;
+$header-background: #1f2532;
+
+$portlet-card-colors: (
+    '1': (
+        'border': #cd9999,
+        'text': #6d0d0d,
+        'background': #ead4d4,
+        'hover': #e2cbcb,
+        'box': #e7b8b8
+    ),
+    '2': (
+        'border': #6d71ab,
+        'text': #302e55,
+        'background': #cccde4,
+        'hover': #bdc1f5,
+        'box': #9596be,
+    ),
+    '3': (
+        'border': #728231,
+        'text': #3b4c04,
+        'background': #c3cca2,
+        'hover': #d5dabf,
+        'box': #95a74a
+    ),
+    '4': (
+        'border': #235972,
+        'text': #053E57,
+        'background': #8cd8fa,
+        'hover': #bed8e5,
+        'box': #529cc0
+    ),
+    '5': (
+        'border': #d3a402,
+        'text': #a1842e,
+        'background': #e9d283,
+        'hover': #ebe2c2,
+        'box': #f3c011
+    ),
+    '6': (
+        'border': #2d733b,
+        'text': #033c0f,
+        'background': #c1e5c8,
+        'hover': #c0e7c8,
+        'box': #6eaf7b
+    ),
+    '7': (
+        'border': #d59c6a,
+        'text': #753e06,
+        'background': #f1e3d8,
+        'hover': #d0c3b7,
+        'box': #d59c6a,
+
+    )
+);
+
+@function portlet-card-color($key: '1', $variant: 'border') {
+    $map: map-get($portlet-card-colors, $key);
+    @return map-get($map, $variant);
+}
+
+$box-shadow-default-color : #ccc;

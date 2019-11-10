@@ -1,0 +1,24 @@
+@import '../../scss/_variables.scss';
+
+.welcome-page {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 71, 166);
+    
+    .welcome-container {
+        width: 430px;
+        border-radius: 5px;
+        background: white;
+        padding: 25px 50px 30px;
+        margin: auto;
+        position: relative;
+        top: 12%;   
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .welcome-container {
+        width: 325px !important;
+    }
+  }

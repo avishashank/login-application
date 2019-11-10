@@ -1,0 +1,112 @@
+@import '../../scss/_variables.scss';
+
+.login-page {
+    // background-image: url('../../assets/background.jpg');
+    // background-position: center fixed;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 71, 166);
+    
+    .login-container {
+        width: 430px;
+        border-radius: 5px;
+        background: white;
+        padding: 25px 50px 30px;
+        margin: auto;
+        position: relative;
+        top: 12%;
+        header {
+            text-align: center;
+            h2 {
+                margin-bottom: 10px;
+            }
+            .login-logo-container {
+                width: 120px;
+                user-select: none;
+                border: 0.5px solid #ddd;
+                border-radius: 5px;
+                margin: 10px auto;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                // &:hover {
+                //     background-color: #fafafa;
+                // }
+            }
+            .google-icon {
+                vertical-align: top;
+                height: 23px;
+                width: 23px;
+                margin-right: 10px;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+    
+            label {
+                color: $grey;
+                margin-top: 25px;
+                display: flex;
+                align-items: center;
+                input {
+                    border: none;
+                    font-size: 14px;
+                    padding: 5px 5px 5px 0px;
+                    margin-left: 15px;
+                    width: 100%;
+                    border-bottom: 1px solid #ddd;  
+                    &:active, 
+                    &:focus {
+                        outline: none;
+                        border-bottom: 1px solid $grey;  
+                    }
+                }
+                input::-ms-clear, input::-ms-reveal {
+                    display: none;
+                }
+            }
+            .password {
+                position: relative;
+                #show-password {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 0;
+                    width: 20px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            .forget-password {
+                font-size: 14px;
+                align-self: flex-end;
+                text-decoration: none;
+                margin-top: 15px;
+            }
+            .button-bar {
+
+                display: flex;
+                .cancel-button {
+    
+                }
+            }
+            .resend-code {
+                text-decoration: underline;
+                cursor: pointer;
+                align-self: flex-end;
+                color: blue;
+                &:hover {
+                    color: #030382;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .login-container {
+        width: 325px !important;
+    }
+  }

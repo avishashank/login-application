@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LoginScreen from './app/login/login';
+import PrivateRoute from './app/common/privateroute';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import Dashboard from './app/dashboard/dashboard';
+import Welcome from './app/welcome/welcome';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {  
+    return (
+      <Router>
+        <Switch>
+          {/* <PrivateRoute exact path="/" component={Dashboard} /> */}
+          <Route exact path="/login" component={LoginScreen} />
+          <Route exact path="/" component = {Dashboard} />
+          <Route exact path="/Welcome" component = {Welcome} />
+          {/* <Route exact path="/launch" component={LoadingScreen} /> */}
+          {/* <PrivateRoute exact roles={["admin"]} path="/users" component={UserGrid} /> */}
+          {/* <Route path="*" component={ErrorPage} /> */}
+        </Switch>
+      </Router>
+    );
+  }
 }
 
 export default App;

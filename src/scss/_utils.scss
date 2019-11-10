@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+.text-grey {
+    color: $grey;
+}
+
+.mlx{
+    margin-left: 3px !important;
+}
+.mls{
+    margin-left: 5px !important;
+}
+.mrs{
+    margin-right: 5px !important;
+}
+.mtm{
+    margin-top: 10px !important;
+}
+
+.mlxxl {
+    margin-left: 50px !important;
+}
+
+
+.color-base{
+    color: #212529;
+}
+.font-14{
+    font-size: 14px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.text-bold {
+    font-weight: 501;
+}

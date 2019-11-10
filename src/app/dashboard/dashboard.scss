@@ -1,0 +1,119 @@
+@import '../../scss/variables';
+
+@each $index, $value in $portlet-card-colors {
+  .portlet-card-#{nth($index, 1)} {
+    border: 1px solid portlet-card-color($index, 'border') !important;
+    .circle {
+      background-color: portlet-card-color($index, 'background');
+    }
+    .course-subtitle {
+      color: portlet-card-color($index, 'text');
+    }
+    .box{
+      background-color:portlet-card-color($index, 'box');
+    }
+    &:hover {
+      box-shadow: 0px 0px 3px 2px portlet-card-color($index, 'hover');
+      background-color: #fdfdfd;
+    }
+  }
+}
+
+.course-title {
+  font-size: 26px;
+  margin: 20px 28px 10px;
+}
+.description{
+   margin-left: 28px;
+   margin-bottom: 25px;
+}
+.course-grid {
+   margin: 20px 80px 0px 40px;
+  .course-heading {
+    display: block;
+  }
+  .courses {
+    width: 325px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    min-height: 150px;
+    overflow: hidden;
+    .btn {
+      border-color: rgb(108, 117, 125);
+      padding: 1px 10px;
+    }
+    .quater-circle {
+      height: 130Px;
+      width: 130px;
+      position: absolute;
+      transform: rotate(46deg);
+      opacity: 0.5;
+      border-radius: 50%;
+      bottom: -30px;
+      right: -28px;
+    }
+    .half-circle {
+      height: 80Px;
+      width: 80px;
+      position: absolute;
+      bottom: 73px;
+      right: -21px;
+      opacity: 0.5;
+      border-radius: 50%;
+    }
+    .box-hover{
+      position: absolute;
+      transform: translateY(100%);
+      transition-duration: .2s;
+      width: 323px;
+      right: 0px;
+      bottom: 0;
+      height: 45px;
+      z-index: 1;
+       text-align: center;
+      & > div{
+        font-weight: 500;
+        position: relative;
+        top: 25%;
+      }  
+     }
+
+    .card-text {
+      margin-right: 30px;
+      margin-bottom: 0px;
+      position: relative;
+      z-index: 1;
+      color: #555555;
+    }
+    .updat-info{
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+  .courses:hover{
+    .box-hover{
+     transform: translateY(-0%);
+     transition-duration: .2s;
+    }
+  }
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .course-grid {
+        .courses{
+            margin-left: -13px !important;
+        }
+    }
+  }

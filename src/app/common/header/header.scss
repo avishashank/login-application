@@ -1,0 +1,127 @@
+@import "../../../scss/_variables.scss";
+
+.header {
+  box-shadow: 0 0px 4px 1px $box-shadow-default-color;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .logo-icon {
+    color: white;
+    font-size: 20px;
+    background-color: #181824;
+    display: flex;
+    padding-left: 15px;
+    cursor: pointer;
+    .logo-text {
+      border-right: 1px solid #ccc;
+      padding-right: 10px;
+      margin-right: 10px;
+      font-weight: 700;
+      padding-left: 15px;
+    }
+    .log-dec {
+      margin-right: 25px;
+      font-size: 24px;
+    }
+  }
+  .logo-icon > * {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  .right-division {
+    color: #1f2532;
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
+    .header-text {
+      line-height: 16px;
+      margin: 0px 20px 0px 10px;
+    }
+    .user-dropdown {
+      outline: none;  
+      & > button {
+        text-transform: capitalize;
+        background-color: #fff;
+        border: none;
+        color: $header-background;
+        padding: 8px 5px;
+        font-size: 14px;
+        margin-top: -13px;
+        .user-icon {
+          font-size: 14px;
+          color: #6c6c6d;
+          margin-right: 5px;
+        }
+
+        &::after {
+          margin-left: 15px;
+          vertical-align: 0.2em;
+          font-size: 16px;
+          color: #6c6c6d;
+        }
+        &:active,
+        &:focus {
+          box-shadow: none !important;
+          background-color: #fff;
+          border: none;
+          color: $header-background;
+        }
+      }
+
+      .dropdown-menu {
+        right: 0;
+        font-size: 14px;
+        left: initial;
+        padding: 2px 0;
+        width: calc(100% + 10px);
+        min-width: 105px;
+        top: 2px !important;
+        border-radius: 0px 0px 5px 5px;
+
+        button {
+          padding: 5px 1rem 8px 10px;
+          &:active{
+            outline: none;
+            box-shadow: none !important;
+            background-color: #fff;
+            border: none !important;
+            color: $header-background;
+          }
+        }
+        .logout-icon {
+          margin-right: 10px;
+        }
+      }
+    }
+    .dropdown.show {
+      & > button {
+        color: black; 
+        .user-icon {
+          color: black;
+        }
+        &::after{
+            color:black;
+        }
+      }
+    }
+  }
+  .right-division > * {
+    margin-top: 10px !important;
+  }
+}
+
+// adjusting box-shadow for Edge 
+@supports (-ms-ime-align:auto) {
+  .header {
+      box-shadow: 0 0px 7px 2px $box-shadow-default-color;
+  }
+
+}
+
+// adjusting box-shadow for firefox
+@-moz-document url-prefix() {
+  .header {
+    box-shadow: 0 0px 7px 1px $box-shadow-default-color;
+}
+}

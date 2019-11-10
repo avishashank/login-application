@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js';
+import "bootstrap/dist/css/bootstrap.css";
+import './scss/_utils.scss';
+import './scss/_global.scss';
+import 'react-app-polyfill/ie11'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
